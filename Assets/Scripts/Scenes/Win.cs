@@ -7,6 +7,11 @@ public class Win : MonoBehaviour
 {
     public AudioSource speaker;
 
+    public void Start()
+    {
+        speaker.Play(1);
+    }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.Return)){

@@ -2267,7 +2267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8b466bf9172466f9481c8c1fe8e55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 0
 --- !u!65 &789932028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4470,7 +4469,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406958379}
-  m_Text: Congratulations
+  m_Text: Next Level
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -4480,10 +4479,10 @@ TextMesh:
   m_FontSize: 58
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 41a67075a12c4425b884586b22819e5e, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278255583
+    rgba: 4294943488
 --- !u!23 &1406958381
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4501,7 +4500,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 41a67075a12c4425b884586b22819e5e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4530,7 +4529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406958379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.2, y: 23.2, z: 2750}
+  m_LocalPosition: {x: -19.2, y: 10.93, z: 2750}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 874804370}
@@ -4892,7 +4891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f34295e3a4f547f3b952cfc63ad6bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartDelay: 1
 --- !u!4 &1517733752
 Transform:
   m_ObjectHideFlags: 0
