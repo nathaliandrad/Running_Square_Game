@@ -14,11 +14,15 @@ public class PlayerCollision : MonoBehaviour
 
     public static bool isCollided;
 
+    public AudioSource speaker;
+    public AudioClip collideSound;
+
     void OnCollisionEnter(Collision collisionInfo)
     {
         if(collisionInfo.collider.tag == "Obstacle") {
 
             movement.enabled = false;
+            speaker.PlayOneShot(collideSound, 1);
             print("Number of deaths: " + GameManager.deaths);
             FindObjectOfType<GameManager>().EndGame();
 
@@ -26,6 +30,7 @@ public class PlayerCollision : MonoBehaviour
         
         if (collisionInfo.collider.tag == "ObstacleDrop") {
             movement.enabled = false;
+            speaker.PlayOneShot(collideSound, 1);
             print("Number of deaths: " + GameManager.deaths);
             FindObjectOfType<GameManager>().EndGame();
         }

@@ -8,9 +8,12 @@ public class GameStartCounter : MonoBehaviour
     public Text startCountText;
     public float targetTime;
     public float secondsClock;
+    public AudioSource speaker;
+    public AudioClip counterSound;
 
     void Start()
     {
+        speaker.PlayOneShot(counterSound, 1);
         targetTime = 3.0f;
         StartCoroutine(CountDown(3));
     }
