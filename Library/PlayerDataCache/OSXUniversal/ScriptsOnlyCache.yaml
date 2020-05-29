@@ -677,7 +677,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 5beff3ad6b58a79ce5a240ca1e511a5f
+      Hash: ae0436ae56ecb71b10b3d82dd9aa648c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameStartCounter
@@ -785,7 +785,7 @@ ScriptsOnlyBuild:
     className: CFX_LightIntensityFade
   - hash:
       serializedVersion: 2
-      Hash: 44ce92324470bd279fc38dff8ad10eba
+      Hash: 2048d682588f7f5821a84ecbb774dc0a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerCollision
@@ -1049,4 +1049,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level3.unity
   - Assets/Scenes/Win.unity
   - Assets/Scenes/Instructions.unity
-  playerPath: /Users/nathiandrade/Desktop/UnityProjects/TestingGame_runningBall/Builds/Running_Square_V1.app
+  playerPath: /Users/nathiandrade/Desktop/UnityProjects/TestingGame_runningBall/Builds/Running_Square_V2.app
