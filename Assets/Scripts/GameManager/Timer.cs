@@ -1,89 +1,53 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float targetTime;
-    public Text timerText;
-    public float seconds;
-    public static bool timerOn;
-    public float stopClock;
+    public float targetTimeInvincible = 6.0f;
+    public Text timerTextInvincible;
+    private float secondsInvincible;
+    private bool timerOnInvincible;
+    public float stopClock = 0.0f;
 
-    public float targetTimeJump;
+    public float targetTimeJump = 11.0f;
     public Text timerTextJump;
-    public float seconds_jump;
-    public static bool timerOnJump;
+    private float secondsJump;
+    private bool timerOnJump;
 
     public Text jumpingText;
     public Text invincibleText;
 
     void Start()
     {
-        timerOn = false;
-        targetTime = 6.0f;
-        stopClock = 0;
+        timerOnInvincible = false;
+        timerTextInvincible.text = "";
 
         timerOnJump = false;
-        targetTimeJump = 11.0f;
+        timerTextJump.text = "";
     }
 
     void Update()
     {
-        timerText.text = "";
-        timerTextJump.text = "";
-        jumpingText.text = "";
+        UpdateTimer(timerOnInvincible, targetTimeInvincible, ref secondsInvincible, timerTextInvincible, invincibleText);
+        UpdateTimer(timerOnJump, targetTimeJump, ref secondsJump, timerTextJump, jumpingText);
+    }
 
-        invincibleText.text = "";
-
-        if (timerOn == true)
+    void UpdateTimer(bool timerOn, float targetTime, ref float seconds, Text timerText, Text statusText)
+    {
+        if (timerOn)
         {
             targetTime -= Time.deltaTime;
             seconds = Mathf.RoundToInt(targetTime % 60);
             timerText.text = seconds.ToString();
-            SetInvincibleText();
-            StopClock();
 
-        }
-
-        if (timerOnJump == true)
-        {
-            targetTimeJump -= Time.deltaTime;
-            seconds_jump = Mathf.RoundToInt(targetTimeJump % 60);
-            timerTextJump.text = seconds_jump.ToString();
-            SetJumpingText();
-            StopClock();
-
+            if (seconds < stopClock)
+            {
+                timerText.text = "";
+                statusText.text = "";
+                timerOn = false;
+            }
         }
     }
-
-    public void StopClock()
-    {
-       
-      
-        if (seconds < stopClock) {
-            timerText.text = "";
-            invincibleText.text = "";
-            timerOn = false;
-        }
-
-        if(seconds_jump < stopClock)
-        {
-            timerOnJump = false;
-            timerTextJump.text = "";
-            jumpingText.text = "";
-        }
-    }
-
-    void SetJumpingText()
-    {
-        jumpingText.text = "Jump Freely";
-    }
-
-    void SetInvincibleText()
-    {
-        invincibleText.text = "Invincible Time";
-    }
-
 }
